@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="tk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BTS Fan page by Kakajan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">💜 BTS Fan Site by Kakajan</div>
+    <nav>
+      <a href="#members">Agzalar</a>
+      <a href="#news">Täzelikler</a>
+      <a href="#gallery">Galereýa</a>
+    </nav>
+  </header>
+
+  
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>ARMY üçin ýörite BTS fan sahypa 💜</h1>
+    <p>Bu ýerde BTS agzalary, suratlar we soňky täzelikler bar.</p>
+  </section>
+
+  <!-- Members -->
+  <section id="members" class="members">
+    <h2>🎤 BTS Agzalary</h2>
+    <div class="grid">
+      <div class="card" onclick="showDetail('rm')"><img src="bts members/rm.jpg" alt="RM"><h3>RM</h3></div>
+      <div class="card" onclick="showDetail('jin')"><img src="bts members/jin.jpg" alt="Jin"><h3>Jin</h3></div>
+      <div class="card" onclick="showDetail('suga')"><img src="bts members/suga.jpg" alt="Suga"><h3>Suga</h3></div>
+      <div class="card" onclick="showDetail('jhope')"><img src="bts members/jhope.jpg" alt="J-Hope"><h3>J-Hope</h3></div>
+      <div class="card" onclick="showDetail('jimin')"><img src="bts members/jimin.jpg" alt="Jimin"><h3>Jimin</h3></div>
+      <div class="card" onclick="showDetail('v')"><img src="bts members/v.jpg" alt="V"><h3>V</h3></div>
+      <div class="card" onclick="showDetail('jk')"><img src="bts members/jungkook.jpg" alt="Jungkook"><h3>Jungkook</h3></div>
+    </div>
+  </section>
+
+  <!-- Member details -->
+  <section id="details">
+    <div id="rm" class="detail hidden"><h2>RM (Kim Namjoon)</h2><p>RM, BTS-iň lideri bolup, 2013-nji ýylda BTS-iň agzasy boldy. Ol, "Runch Randa" atly sahna ismi bilen Koreýanyň hip-hop sahnasynda tanalýar. 2015-nji ýylda ilkinji solo mikstapýi "RM" çykardy, soňra 2018-nji ýylda "Mono" atly mikstapýini çykardy. 2022-nji ýylda ilkinji resmi solo albomy "Indigo" çykdy. 2024-nji ýylda "Right Place, Wrong Person" atly ikinji albomy çykdy. RM, şeýle hem birnäçe meşhur artistler bilen hyzmatdaşlyk etdi, şol sanda Megan Thee Stallion, Fall Out Boy, Younha, Lil Nas X we beýlekiler..</p></div>
+    <div id="jin" class="detail hidden"><h2>Jin (Kim Seokjin)</h2><p>Jin, BTS-iň ilkinji agzasy bolup, 2013-nji ýylda BTS-iň agzasy bolmak üçin auditiona gatnaşdy. Ol, BTS-iň iň uly agzasy bolup, "Worldwide Handsome" (Dünýäniň iň owadan adamy) diýlip atlandyrylýar. Şeýle hem, ol "Awake" we "Epiphany" ýaly köp sanly duýgusal we çuňňur sözleri bilen tanalýar.</p></div>
+    <div id="suga" class="detail hidden"><h2>Suga (Min Yoongi)</h2><p>Suga, BTS-iň iň içki we duýgusal agzasy hökmünde tanalýar. Ol, "Agape" we "First Love" ýaly köp sanly duýgusal we çuňňur sözleri bilen tanalýar. Şeýle hem, ol "Agust D" atly solo mikstapýini çykardy we "D-2" atly ikinji mikstapýini çykardy..</p></div>
+    <div id="jhope" class="detail hidden"><h2>J-Hope (Jung Hoseok)</h2><p>J-Hope, BTS-iň iň energiýaly agzasy hökmünde tanalýar. Ol, "Hope World" atly solo albomy bilen dünýäde uly meşhurlyga eýe boldy. Şeýle hem, ol "Jack In The Box" atly solo albomy bilen öz artistik ösüşini görkezdi.</p></div>
+    <div id="jimin" class="detail hidden"><h2>Jimin (Park Jimin)</h2><p>Jimin, BTS-iň iň owadan we duýgusal agzasy hökmünde tanalýar. Ol, "Serendipity" we "Lie" ýaly köp sanly duýgusal we çuňňur sözleri bilen tanalýar. Şeýle hem, ol "Face" atly solo albomy bilen öz artistik ösüşini görkezdi.</p></div>
+    <div id="v" class="detail hidden"><h2>V (Kim Taehyung)</h2><p>V, BTS-iň iň owadan we duýgusal agzasy hökmünde tanalýar. Ol, "Singularity" we "Stigma" ýaly köp sanly duýgusal we çuňňur sözleri bilen tanalýar. Şeýle hem, ol "Layover" atly solo albomy bilen öz artistik ösüşini görkezdi.</p></div>
+    <div id="jk" class="detail hidden"><h2>Jungkook (Jeon Jungkook)</h2><p>Jungkook, BTS-iň iň ýaş agzasy bolup, "Euphoria" we "My Time" ýaly köp sanly duýgusal we çuňňur sözleri bilen tanalýar. Ol, şeýle hem "Golden" atly solo albomy bilen öz artistik ösüşini görkezdi.</p></div>
+  </section>
+
+  <!-- News Slider -->
+  <section id="news" class="news">
+    <h2>📰 BTS Täzelikleri</h2>
+    <div class="slider">
+      <div class="slide active">BTS täze albom taýýarlap başlady!</div>
+      <div class="slide">Jungkook täze solo klibini çykardy.</div>
+      <div class="slide">RM halkara konferensiýa gatnaşdy.</div>
+      <div class="slide">BTS dünýä şowhunly konsert tura taýýar bolýar.</div>
+    </div>
+    <div class="controls">
+      <button onclick="prevSlide()">◀</button>
+      <button onclick="nextSlide()">▶</button>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="gallery">
+    <h2>📷 BTS Galereýa</h2>
+    <div class="grid">
+      <img src="gallery/BTS 1.jpg" alt="surat1">
+      <img src="gallery/BTS 2.jpg" alt="surat2">
+      <img src="gallery/BTS 3.jpg" alt="surat3">
+      <img src="gallery/BTS 4.jpg" alt="surat4">
+      <img src="gallery/BTS 5.jpg" alt="surat5">
+      <img src="gallery/BTS 6.jpg" alt="surat6">
+      <img src="gallery/BTS 7.jpg" alt="surat7">
+      <img src="gallery/BTS 8.jpg" alt="surat8">
+      <img src="gallery/BTS 9.jpg" alt="surat9">
+      <img src="gallery/BTS 10.jpg" alt="surat10">
+    </div>
+  </section>
+
+  <footer>
+    
+    <p>© 2025 BTS Fan Saýt — ARMY üçin döredildi 💜</p>
+  </footer>
+
+  <!-- Mini Audio Pleýer -->
+<div class="mini-player">
+  <button id="prev"><i class="fa-solid fa-backward-step"></i></button>
+  <button id="play"><i class="fa-solid fa-play"></i></button>
+  <button id="next"><i class="fa-solid fa-forward-step"></i></button>
+  <div class="title" id="songTitle">BTS — Sample</div>
+  <audio id="audio" src="BTS.mp3"></audio>
+</div>
+
+
+  <!-- Scroll to top button -->
+  <button id="topBtn" onclick="scrollTopFn()">⬆</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
