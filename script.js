@@ -65,3 +65,22 @@ audioEl.addEventListener("ended", nextSong);
 
 // init
 loadSong(0);
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Sayfa açılınca localStorage kontrol et
+if (localStorage.getItem("theme")) {
+  body.setAttribute("data-theme", localStorage.getItem("theme"));
+} else {
+  body.setAttribute("data-theme", "dark"); // Varsayılan dark
+}
+
+toggleBtn.addEventListener("click", () => {
+  if (body.getAttribute("data-theme") === "dark") {
+    body.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+  } else {
+    body.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  }
+});
