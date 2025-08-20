@@ -1,4 +1,10 @@
-body {margin:0;font-family:sans-serif;background:#0d1117;color:#fff;}
+body {margin:0;font-family:sans-serif;background:#0d1117;color:#fff;
+    margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;    
+}
 header {background:#161b22;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;}
 header .logo {font-weight:bold;}
 nav a {color:#fff;margin:0 10px;text-decoration:none;}
@@ -99,3 +105,22 @@ footer {text-align:center;padding:20px;background:#161b22;margin-top:20px;}
 }
 
 @keyframes float{ from{transform:translateY(-10px)} to{transform:translateY(10px)} }
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0d1117;
+  --text-color: #ffffff;
+}
+#theme-toggle {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #444;
+  color: #fff;
+  font-size: 16px;
+}
