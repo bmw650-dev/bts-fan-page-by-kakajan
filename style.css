@@ -109,6 +109,11 @@ footer {text-align:center;padding:20px;background:#161b22;margin-top:20px;}
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
+  --bg: #0f1115;
+  --card: #161a22;
+  --text: #e7e9ee;
+  --muted: #9aa3b2;
+  --radius: 16px;
 }
 
 [data-theme="dark"] {
@@ -123,4 +128,58 @@ footer {text-align:center;padding:20px;background:#161b22;margin-top:20px;}
   background: #444;
   color: #fff;
   font-size: 16px;
+}
+
+
+* { box-sizing: border-box; }
+.container {
+  max-width: 900px;
+  padding: 24px;
+  margin: 0 auto;
+}
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+.video-wrap {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  background: #000;
+  outline: none;
+}
+.video-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.video-actions button {
+  border: 0;
+  background: #232a36;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.video-actions button:active {
+  transform: scale(0.98);
+}
+
+#speed {
+  min-width: 48px;
+  text-align: center;
+  color: var(--muted);
 }
