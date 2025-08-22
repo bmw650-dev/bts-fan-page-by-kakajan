@@ -73,6 +73,47 @@
     </div>
   </section>
 
+  <main class="container">
+    <h1 class="title">Video</h1>
+
+    <div class="video-wrap">
+      <video
+        id="player"
+        class="video"
+        controls
+        playsinline
+        preload="metadata"
+        poster="assets/poster.jpg"
+      >
+        <!-- Kendi dosya yollarını koy -->
+        <source src="videos/bts.mp4" type="video/mp4" />
+        <source src="assets/videos/ornek.webm" type="video/webm" />
+
+        <!-- İsteğe bağlı altyazı (VTT) -->
+        <track
+          kind="subtitles"
+          srclang="tr"
+          label="Türkçe"
+          src="assets/subtitles/tr.vtt"
+          default
+        />
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+
+      <!-- Basit ek kontroller -->
+      <div class="video-actions">
+        <button id="playPauseBtn" aria-label="Oynat/Duraklat">▶ / ⏸</button>
+        <button id="muteBtn" aria-label="Ses Aç/Kapa">🔊/🔇</button>
+        <button id="speedDown" aria-label="Hız Azalt">–</button>
+        <span id="speed" aria-live="polite">1.0x</span>
+        <button id="speedUp" aria-label="Hız Artır">+</button>
+        <button id="pipBtn" aria-label="Resim içinde Resim">PiP</button>
+        <button id="fsBtn" aria-label="Tam Ekran">⛶</button>
+      </div>
+    </div>
+  </main>
+
+
   <!-- Gallery -->
   <section id="gallery" class="gallery">
     <h2>📷 BTS Galereýa</h2>
