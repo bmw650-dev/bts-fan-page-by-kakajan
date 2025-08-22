@@ -84,3 +84,66 @@ toggleBtn.addEventListener("click", () => {
     localStorage.setItem("theme", "dark");
   }
 });
+
+// Basit kontrol bağlama
+const v = document.getElementById("player");
+const playPauseBtn = document.getElementById("playPauseBtn");
+const muteBtn = document.getElementById("muteBtn");
+const speedEl = document.getElementById("speed");
+const speedDown = document.getElementById("speedDown");
+const speedUp = document.getElementById("speedUp");
+const fsBtn = document.getElementById("fsBtn");
+const pipBtn = document.getElementById("pipBtn");
+
+// Oynat / Duraklat
+playPauseBtn.addEventListener("click", () => {
+  if (v.paused) v.play();
+  else v.pause();
+});
+
+// Sessize al / aç
+muteBtn.addEventListener("click", () => {
+  v.muted = !v.muted;
+});
+
+// Hız ayarı
+function setSpeed(rate) {
+  const clamped = Math.max(0.25, Math.min(2, rate));
+  v.playbackRate = clamped;
+  speedEl.textContent = clamped.toFixed(2) + "x";
+}
+setSpeed(1.0);
+
+speedDown.addEventListener("click", () => setSpeed(v.playbackRate - 0.25));
+speedUp.addEventListener("click", () => setSpeed(v.playbackRate + 0.25));
+
+// Tam ekran
+fsBtn.addEventListener("click", async () => {
+  try {
+    if (!document.fullscreenElement) {
+      await (v.requestFullscreen ? v.requestFullscreen() : v.parentElement.requestFullscreen());
+    } else {
+      await document.exitFullscreen();
+    }
+  } catch (e) {
+    console.error(e);
+  }
+});
+
+// PiP (destekliyse)
+pipBtn.addEventListener("click", async () => {
+  try {
+    if (document.pictureInPictureElement) {
+      await document.exitPictureInPicture();
+    } else if (document.pictureInPictureEnabled && !v.disablePictureInPicture) {
+      await v.requestPictureInPicture();
+    }
+  } catch (e) {
+    console.error(e);
+  }
+});
+
+// Kullanışlı: video tıklandığında oynat/duraklat
+v.addEventListener("click", () => {
+  if (v.paused) v.play(); else v.pause();
+});
